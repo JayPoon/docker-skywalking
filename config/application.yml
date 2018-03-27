@@ -1,7 +1,7 @@
 naming:
   jetty:
-    host: ${NAMING_BIND_HOST:localhost}
-    port: ${NAMING_BIND_PORT:10800}
+    host: localhost
+    port: 10800
     context_path: /
 remote:
   gRPC:

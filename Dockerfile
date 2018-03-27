@@ -15,7 +15,7 @@ COPY bin bin
 ADD docker-entrypoint.sh /
 RUN chmod 755 /docker-entrypoint.sh && chmod 755 -R bin
 
-EXPOSE 10800/tcp 11800/tcp 12800/tcp 
+EXPOSE 10800 11800 12800 
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["bin/collectorServiceDocker.sh"]
