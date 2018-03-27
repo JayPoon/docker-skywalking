@@ -14,7 +14,6 @@ WORKDIR /usr/local/skywalking-collector
 COPY bin bin
 COPY collector-libs collector-libs
 COPY config config
-COPY webapp webapp
 
 RUN chmod 755 /docker-entrypoint.sh && chmod 755 -R bin
 
