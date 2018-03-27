@@ -1,4 +1,6 @@
 #!/bin/sh
+echo "current working dir:"
+pwd
 
 echo "replace {ZK_ADDRESSES} to ${ZK_ADDRESSES}"
 eval sed -i -e 's/\{ZK_ADDRESSES\}/${ZK_ADDRESSES}/' config/application.yml.tmpl
