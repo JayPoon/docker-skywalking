@@ -12,9 +12,8 @@ COPY collector-libs collector-libs
 COPY config config
 COPY bin bin
 
-RUN chmod 755 /docker-entrypoint.sh && chmod 755 -R bin
-
 ADD docker-entrypoint.sh /
+RUN chmod 755 /docker-entrypoint.sh && chmod 755 -R bin
 
 EXPOSE 10800/tcp 11800/tcp 12800/tcp 
 
