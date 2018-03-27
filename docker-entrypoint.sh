@@ -40,7 +40,7 @@ eval sed -i -e 's/\{UI_JETTY_BIND_HOST\}/${UI_JETTY_BIND_HOST}/' config/applicat
 
 echo "replace application.yml.tmpl to application.yml"
 #rm -f config/application.yml
-mv config/application.yml.tmpl config/application.yml
+cp -f config/application.yml.tmpl config/application.yml
 
 
 exec "$@"
