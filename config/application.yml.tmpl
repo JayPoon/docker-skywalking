@@ -6,11 +6,11 @@ naming:
     context_path: /
 remote:
   gRPC:
-    host: localhost
+    host: {BIND_HOST}
     port: {REMOTE_BIND_PORT}
 agent_gRPC:
   gRPC:
-    host: localhost
+    host: {BIND_HOST}
     port: {AGENT_GRPC_BIND_PORT}
 agent_jetty:
   jetty:
