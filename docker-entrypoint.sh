@@ -20,8 +20,14 @@ eval sed -i -e 's/\{NAMING_BIND_HOST\}/${NAMING_BIND_HOST}/' config/application.
 echo "replace {NAMING_BIND_PORT} to ${NAMING_BIND_PORT}"
 eval sed -i -e 's/\{NAMING_BIND_PORT\}/${NAMING_BIND_PORT}/' config/application.yml.tmpl
 
+echo "replace {REMOTE_BIND_HOST} to ${REMOTE_BIND_HOST}"
+eval sed -i -e 's/\{REMOTE_BIND_HOST\}/${REMOTE_BIND_HOST}/' config/application.yml.tmpl
+
 echo "replace {REMOTE_BIND_PORT} to ${REMOTE_BIND_PORT}"
 eval sed -i -e 's/\{REMOTE_BIND_PORT\}/${REMOTE_BIND_PORT}/' config/application.yml.tmpl
+
+echo "replace {AGENT_GRPC_BIND_HOST} to ${AGENT_GRPC_BIND_HOST}"
+eval sed -i -e 's/\{AGENT_GRPC_BIND_HOST\}/${AGENT_GRPC_BIND_HOST}/' config/application.yml.tmpl
 
 echo "replace {AGENT_GRPC_BIND_PORT} to ${AGENT_GRPC_BIND_PORT}"
 eval sed -i -e 's/\{AGENT_GRPC_BIND_PORT\}/${AGENT_GRPC_BIND_PORT}/' config/application.yml.tmpl

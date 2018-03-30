@@ -22,13 +22,16 @@ done
 
 COLLECTOR_OPTIONS=" -Dcollector.logDir=${COLLECT_LOG_DIR}"
 
-eval exec "\"$_RUNJAVA\" ${JAVA_OPTS} ${COLLECTOR_OPTIONS} -classpath $CLASSPATH org.apache.skywalking.apm.collector.boot.CollectorBootStartUp \
-        2>${COLLECT_LOG_DIR}/collector.log 1> /dev/null &"
+${_RUNJAVA} ${JAVA_OPTS} ${COLLECTOR_OPTIONS} -classpath $CLASSPATH org.apache.skywalking.apm.collector.boot.CollectorBootStartUp
 
-if [ $? -eq 0 ]; then
-    sleep 1
-	echo "Skywalking Collector started successfully!"
-else
-	echo "Skywalking Collector started failure!"
-	exit 1
-fi
+# eval exec "\"$_RUNJAVA\" ${JAVA_OPTS} ${COLLECTOR_OPTIONS} -classpath $CLASSPATH org.apache.skywalking.apm.collector.boot.CollectorBootStartUp \
+#         2>${COLLECT_LOG_DIR}/collector.log 1> /dev/null &"
+
+# if [ $? -eq 0 ]; then
+#     sleep 1
+# 	echo "Skywalking Collector started successfully!"
+# else
+# 	echo "Skywalking Collector started failure!"
+# 	exit 1
+# fi
+
