@@ -24,6 +24,6 @@ RUN chmod 755 /docker-entrypoint.sh && chmod 755 -R bin
 EXPOSE 10800 11800 12800 
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["bin/collectorServiceDocker.sh"]
+CMD ["bin/collectorService.sh"]
 
 #CMD ["bin/startup.sh"]
